@@ -2,9 +2,9 @@
 Exam 3, problem 1.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  October 2018.
+         their colleagues and YIqi Zhao.  October 2018.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -68,6 +68,11 @@ def run_test_problem1():
 
 
 def problem1(numbers):
+    total=0
+    for k in range(len(numbers)//3):
+        total=total+numbers[k+len(numbers)//3]
+    return total
+
     """
     What comes in:
       -- A non-empty sequence of numbers, with the sequence having a length

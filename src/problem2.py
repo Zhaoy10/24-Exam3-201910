@@ -2,9 +2,9 @@
 Exam 3, problem 2.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  October 2018.
+         their colleagues and Yiqi Zhao.  October 2018.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -73,6 +73,19 @@ def run_test_problem2():
     
     
 def problem2(sequence):
+    index=0
+    number=0
+    for k in range(len(sequence)):
+        if sequence[k]>0:
+            if sequence[k]>number:
+                number=sequence[k]
+                index=k
+        else:
+            if -sequence[k]>number:
+                number=-sequence[k]
+                index=k
+    return index
+
     """
     What comes in:
       -- An non-empty sequence of integers with no duplicates.

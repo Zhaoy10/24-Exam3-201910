@@ -189,6 +189,19 @@ def run_test_problem5():
     
     
 def problem5(x):
+    number=x
+    for k in range(2000):
+        sum=sum_of_digits(number)
+        if is_prime(number) is True:
+            if is_prime(sum)is True:
+                return number
+        number=number+1
+
+
+
+
+
+
     """
     What comes in:  An integer  x  that is at least 2.
     What goes out:
